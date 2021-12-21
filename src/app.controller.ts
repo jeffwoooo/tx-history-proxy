@@ -5,6 +5,11 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
+  @Get('health')
+  async getHealth() {
+    return 'ok';
+  }
+
   @Get(':account')
   getAccountTxHistory(
     @Param('account') account: string,
