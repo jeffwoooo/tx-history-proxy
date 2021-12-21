@@ -10,7 +10,7 @@ export class AppController {
     return 'ok';
   }
 
-  @Get(':account')
+  @Get('station/:account')
   getAccountTxHistory(
     @Param('account') account: string,
     @Query('offset') offset: string,
