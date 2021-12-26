@@ -3,7 +3,7 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://fcd.terra.dev/v1';
+axios.defaults.baseURL = process.env.FCD_URL + '/v1';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
